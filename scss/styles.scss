@@ -1,4 +1,5 @@
-body {
-    color: blue;
-    color: lightcoral;
-}
+@import "generales";
+@import "navbar";
+@import "secciones";
+@import "footer";
+@import "queries";

@@ -1,0 +1,33 @@
+nav {
+    text-transform: uppercase;
+    font-family: $variableTexto;
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    a{
+        padding-left: 20px;
+    }
+    div{
+        @include flexCenter;
+       ul li{
+        display: flex;
+	    justify-content: space-between; 
+	    align-items: center;
+        padding: 0 30px;
+       } 
+    }
+}
+.navbar{
+    width: 100%;
+    background-image: linear-gradient(to bottom, #a96635, #bf743d);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: $colorSecundario;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+color: $highlight;
+}
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color: #000;
+    }

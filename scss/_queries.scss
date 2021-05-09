@@ -36,6 +36,9 @@
       footer{
         text-align: center;
         padding: 0;
+        ul {
+          justify-content: center;
+        }
       }
     }
     @media only screen and (max-width: 768px) {
@@ -54,13 +57,6 @@
         font-size: 120px;
         line-height: 120px;
       }
-      footer{
-        text-align: center;
-        padding: 0;
-      }
-    }
-    
-    @media only screen and (max-width: 768px){
       .testimonial-text .box{
         width: 80%;
         text-align: center;
@@ -87,6 +83,13 @@
       .gracias p {
         font-size: 60px;
         line-height: 60px;
+      }
+      footer{
+        text-align: center;
+        padding: 0;
+        ul {
+          justify-content: center;
+        }
       }
     }
     

@@ -8,6 +8,7 @@ body {
   background: #a96635;
   font-family: "Roboto", sans-serif;
   color: #3b3838;
+  min-width: 440px;
 }
 
 a {
@@ -263,7 +264,13 @@ nav div ul li {
 .titleImg img {
   width: 360px;
 }
-.titleImg .breadcrumb-item active {
+.titleImg a:hover {
+  color: #fa944a;
+}
+.titleImg .breadcrumb-item.active {
+  color: #fa944a;
+}
+.titleImg .breadcrumb-item.active::before {
   color: #fa944a;
 }
 
@@ -497,12 +504,16 @@ nav div ul li {
   background-color: #000;
 }
 
+.productosRelacionados {
+  background-image: linear-gradient(to bottom, #a96635, #bf743d);
+}
 .productosRelacionados h2 {
   font-size: 82px;
   line-height: 110px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 42px;
+  line-height: 44px;
   text-align: center;
 }
 .productosRelacionados a {
@@ -515,6 +526,10 @@ nav div ul li {
   background-color: #fa944a;
   color: #3b3838;
   border: 1px solid #fa944a;
+}
+.productosRelacionados a:hover {
+  background-color: #3b3838;
+  color: #fa944a;
 }
 .productosRelacionados .producto {
   text-align: center;
@@ -539,6 +554,15 @@ nav div ul li {
 .productDescription .columna {
   text-align: center;
 }
+.productDescription .columna .breadcrumb-item + .breadcrumb-item::before {
+  color: #3b3838;
+}
+.productDescription .columna .breadcrumb-item.active {
+  color: #fa944a;
+}
+.productDescription .columna .breadcrumb-item.active::before {
+  color: #fa944a;
+}
 .productDescription h3 {
   font-size: 82px;
   line-height: 110px;
@@ -560,6 +584,9 @@ nav div ul li {
 }
 .productDescription a {
   padding-right: 15px;
+}
+.productDescription a:hover {
+  color: #fa944a;
 }
 .productDescription form {
   padding-top: 25px;
@@ -610,15 +637,12 @@ nav div ul li {
   font-weight: bold;
 }
 
-footer {
-  margin-top: 40px;
-  padding-bottom: 60px;
-}
-
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 60px;
 }
 
 .footerMap {
@@ -635,6 +659,14 @@ footer {
   margin-top: 20px;
   margin-bottom: 25px;
 }
+.footerDatos h5 {
+  font-size: 82px;
+  line-height: 110px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+}
 
 .footerRRSS {
   flex: 3 1 auto;
@@ -645,10 +677,24 @@ footer {
   margin-top: 20px;
   margin-bottom: 25px;
 }
-
+.footerRRSS h5 {
+  font-size: 82px;
+  line-height: 110px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+}
+.footerRRSS ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 .footerRRSS ul li {
   list-style-type: none;
-  padding-left: 10px;
+}
+.footerRRSS ul li img {
+  width: 60px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -698,6 +744,9 @@ footer {
     text-align: center;
     padding: 0;
   }
+  footer ul {
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 768px) {
   .descripcion {
@@ -719,12 +768,6 @@ footer {
     line-height: 120px;
   }
 
-  footer {
-    text-align: center;
-    padding: 0;
-  }
-}
-@media only screen and (max-width: 768px) {
   .testimonial-text .box {
     width: 80%;
     text-align: center;
@@ -757,6 +800,14 @@ footer {
   .gracias p {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0;
+  }
+  footer ul {
+    justify-content: center;
   }
 }
 

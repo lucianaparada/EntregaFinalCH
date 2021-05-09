@@ -19,7 +19,7 @@ nav {
 }
 .navbar{
     width: 100%;
-    background-image: linear-gradient(to bottom, #a96635, #bf743d);
+    background-image: linear-gradient(to bottom, $colorPrimario, $colorBotones);
 }
 .navbar-light .navbar-nav .nav-link {
     color: $colorSecundario;

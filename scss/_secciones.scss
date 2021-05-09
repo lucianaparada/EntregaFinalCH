@@ -150,7 +150,13 @@
     img{
         width: 360px;
     }
-    .breadcrumb-item active{
+    a:hover{
+        color: $highlight;
+    }
+    .breadcrumb-item.active{
+        color: $highlight;
+    }
+    .breadcrumb-item.active::before{
         color: $highlight;
     }
     padding-bottom: 40px;
@@ -347,13 +353,19 @@
   }
 
   .productosRelacionados {
+      background-image: $gradiente-bottom;
       h2{
           @include titulos;
           font-size: 42px;
+          line-height: 44px;
           text-align: center;
       }
       a{
           @include btn-highlight;
+      }
+      a:hover{
+          background-color: $colorSecundario;
+          color: $highlight;
       }
       
       .producto {
@@ -376,8 +388,17 @@
   }
 
   .productDescription{
-      .columna{
+    .columna{
        text-align: center;
+       .breadcrumb-item+.breadcrumb-item::before{
+           color: $colorSecundario;
+       }
+       .breadcrumb-item.active{
+        color: $highlight;
+        }
+        .breadcrumb-item.active::before{
+        color: $highlight;
+        }
       }
       
     h3{
@@ -396,6 +417,9 @@
       }
     a{
         padding-right: 15px;
+    }
+    a:hover{
+        color: $highlight;
     }
     form{
         padding-top: 25px;

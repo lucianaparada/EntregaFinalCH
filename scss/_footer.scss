@@ -1,11 +1,9 @@
-footer{
-    margin-top: 40px;
-    padding-bottom: 60px;
-}
 .footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 60px;
 }
   
 .footerMap{
@@ -20,8 +18,12 @@ footer{
     padding-top: 40px;
     margin-top: 20px;
     margin-bottom: 25px;
+    h5{
+        @include titulos;
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
-  
 .footerRRSS{
     flex: 3 1 auto;
     padding-top: 40px;
@@ -30,11 +32,20 @@ footer{
     border-left: 1px solid #fa944a;
     margin-top: 20px;
     margin-bottom: 25px;
-}
-  
-.footerRRSS{
-    ul li{
-        list-style-type: none;
-        padding-left: 10px;
+    h5{
+        @include titulos;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    ul{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        li{
+            list-style-type: none;
+            img{
+                width: 60px;
+            }
+        }
     }
 }

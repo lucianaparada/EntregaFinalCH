@@ -137,6 +137,10 @@ nav div ul li {
   border: 1px solid #000000;
   color: #fdb8ff;
 }
+.descripcion-texto .btn-primary {
+  background-color: #bf6121;
+  border: 1px solid #bf6121;
+}
 
 .productosRecomendados {
   padding-top: 65px;
@@ -461,6 +465,13 @@ nav div ul li {
   border: 1px solid #3b3838;
   background-color: #000;
   color: #fdb8ff;
+}
+.form .btn-primary {
+  background-color: #bf6121;
+  border: 1px solid #bf6121;
+  color: #3b3838;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .gracias p {

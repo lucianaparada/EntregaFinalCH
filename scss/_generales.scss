@@ -1,10 +1,10 @@
-$colorPrimario: #a96635;
+$colorPrimario: #bf6121;
 $colorSecundario: #3b3838;
-$colorBotones: #bf743d;
+$colorBotones: #e57225;
 $variableTexto: 'Roboto', sans-serif;
 $variableTitulo: 'Playfair Display', serif;
-$highlight: #fa944a;
-$gradiente-bottom:linear-gradient(to bottom, $colorPrimario, #bf743d);
+$highlight: #fdb8ff;
+$gradiente-bottom:linear-gradient(to bottom, $colorPrimario, $colorBotones);
 
 @mixin flexCenter{
 	display: flex;
@@ -61,6 +61,15 @@ $gradiente-bottom:linear-gradient(to bottom, $colorPrimario, #bf743d);
 	background-color: $highlight;
 	color: $colorSecundario;
 	border: 1px solid $highlight;
+}
+@mixin img-efecto{
+    transform: scale(1.2);
+    transform: rotate(-15deg);
+}
+
+@mixin aparecer-efecto($duracion) {
+	animation-duration: $duracion;
+    animation-name: aparecer;
 }
 
 * {

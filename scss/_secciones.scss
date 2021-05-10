@@ -5,18 +5,31 @@
     background-position: center;
   }
 
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .descripcion {
     @include flexCenter;
     background-image: $gradiente-bottom;
     h2 {
     @include titulos;
+    @include aparecer-efecto(5s);
     }
     p {
     @include parrafos;
     }
     img {
         max-width: 600px;
+        @include aparecer-efecto(4s);
     } 
+    img:hover{
+        transform: scale(1.2);
+    }
     
 }
 .descripcion-texto {
@@ -28,6 +41,7 @@
     .btn-primario:hover{
         background-color: #000000;
         border: 1px solid #000000;
+        color: $highlight;
     } 
     .btn-secundario {
         @include btn-secundario;
@@ -35,13 +49,14 @@
     .btn-secundario:hover {
         background-color: #000000;
         border: 1px solid #000000;
-        color: $colorBotones;
+        color: $highlight;
     } 
 }
 .productosRecomendados {
     padding-top: 65px;
     h3{
         @include titulos;
+        @include aparecer-efecto(10s);
         font-size: 48px;
         line-height: 54px;
         font-weight: bold;
@@ -56,6 +71,9 @@
             max-width: 220px;
             border-radius: 180px;
             padding: 30px;
+        }
+        img:hover{
+            @include img-efecto;
         }
          h4{
             @include parrafos;
@@ -75,8 +93,8 @@
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 4px;
-            background-color: $colorSecundario;
-            color: $colorPrimario;
+            background-color: #000;
+            color: $highlight;
             border: 1px solid $colorSecundario;
         }
         span{
@@ -105,7 +123,7 @@
     transform: translate(-50%, -50%);
     color: $colorSecundario;
     padding: 20px;
-    background-color: #fa944a;
+    background-color: $highlight;
     padding-top: 40px;
 }
 
@@ -140,6 +158,7 @@
         font-weight: bold;
         padding-top: 60px;
         padding-bottom: 40px;
+        @include aparecer-efecto(4s);
     }
     p{
         @include parrafos;
@@ -149,6 +168,9 @@
     }
     img{
         width: 360px;
+    }
+    img:hover{
+        transform: rotate(-15deg);
     }
     a:hover{
         color: $highlight;
@@ -202,6 +224,9 @@
         max-width: 170px; 
         border-radius: 100px; 
     }
+    img:hover{
+        @include img-efecto;
+    }
     div{
         text-align: center;
         h2{
@@ -247,10 +272,9 @@
 .formulario {
     p{
     @include titulos;
+    @include aparecer-efecto(5s);
     background-image: linear-gradient(to left, $colorPrimario, $colorBotones);
     padding: 40px 20px 40px 40px;
-    animation-duration: 10s;
-    animation-name: aparecer;
     font-weight: bold;
     line-height: 90px;
     }
@@ -302,7 +326,7 @@
         color: $highlight;
         padding: 80px 40px;
         text-align: center;
-        background-image: linear-gradient(to top, #a96635, #bf743d);
+        background-image: linear-gradient(to top, $colorPrimario, $colorBotones);
       }
   }
 
@@ -312,8 +336,7 @@
     flex-wrap: wrap;
     justify-content: stretch;
     text-align: center;
-    animation-duration: 6s;
-    animation-name: aparecer;
+    @include aparecer-efecto(3s);
     a{
         display:inline-block;
         color: $colorSecundario;
@@ -375,6 +398,9 @@
             max-width: 200px;
             border-radius: 180px;
             padding: 20px;
+        }
+        img:hover{
+            @include img-efecto;
         }
          h4{
             @include parrafos;
@@ -439,6 +465,7 @@
     }
     .btn-primario:hover{
         background-color: #000;
+        color: $highlight;
     }
   }
 

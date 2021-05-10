@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #a96635;
+  background: #bf6121;
   font-family: "Roboto", sans-serif;
   color: #3b3838;
   min-width: 440px;
@@ -19,9 +19,8 @@ a {
 nav {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 4px;
-  font-weight: 700;
 }
 nav a {
   padding-left: 20px;
@@ -40,7 +39,7 @@ nav div ul li {
 
 .navbar {
   width: 100%;
-  background-image: linear-gradient(to bottom, #a96635, #bf743d);
+  background-image: linear-gradient(to bottom, #bf6121, #e57225);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -48,7 +47,7 @@ nav div ul li {
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 
 .navbar-light .navbar-nav .nav-link.active:hover {
@@ -62,17 +61,27 @@ nav div ul li {
   background-position: center;
 }
 
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .descripcion {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, #a96635, #bf743d);
+  background-image: linear-gradient(to bottom, #bf6121, #e57225);
 }
 .descripcion h2 {
   font-size: 82px;
   line-height: 110px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
+  animation-duration: 5s;
+  animation-name: aparecer;
 }
 .descripcion p {
   padding: 20px 40px 20px 0;
@@ -81,6 +90,11 @@ nav div ul li {
 }
 .descripcion img {
   max-width: 600px;
+  animation-duration: 4s;
+  animation-name: aparecer;
+}
+.descripcion img:hover {
+  transform: scale(1.2);
 }
 
 .descripcion-texto {
@@ -98,12 +112,13 @@ nav div ul li {
   font-weight: 700;
   letter-spacing: 4px;
   background-color: #3b3838;
-  color: #a96635;
+  color: #bf6121;
   border: 1px solid #3b3838;
 }
 .descripcion-texto .btn-primario:hover {
   background-color: #000000;
   border: 1px solid #000000;
+  color: #fdb8ff;
 }
 .descripcion-texto .btn-secundario {
   padding: 20px 40px;
@@ -113,14 +128,14 @@ nav div ul li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  background-color: #bf743d;
+  background-color: #e57225;
   color: #3b3838;
   border: 1px solid #3b3838;
 }
 .descripcion-texto .btn-secundario:hover {
   background-color: #000000;
   border: 1px solid #000000;
-  color: #bf743d;
+  color: #fdb8ff;
 }
 
 .productosRecomendados {
@@ -131,12 +146,14 @@ nav div ul li {
   line-height: 110px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
+  animation-duration: 10s;
+  animation-name: aparecer;
   font-size: 48px;
   line-height: 54px;
   font-weight: bold;
   padding: 20px 20px;
   text-align: left;
-  background-image: linear-gradient(to left, #a96635, #bf743d);
+  background-image: linear-gradient(to left, #bf6121, #e57225);
 }
 .productosRecomendados .product {
   text-align: center;
@@ -146,6 +163,10 @@ nav div ul li {
   max-width: 220px;
   border-radius: 180px;
   padding: 30px;
+}
+.productosRecomendados .product img:hover {
+  transform: scale(1.2);
+  transform: rotate(-15deg);
 }
 .productosRecomendados .product h4 {
   padding: 20px 40px 20px 0;
@@ -164,9 +185,9 @@ nav div ul li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   color: #3b3838;
-  border: 1px solid #fa944a;
+  border: 1px solid #fdb8ff;
 }
 .productosRecomendados .product .btn-highlight:hover {
   padding: 10px 25px;
@@ -175,8 +196,8 @@ nav div ul li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  background-color: #3b3838;
-  color: #a96635;
+  background-color: #000;
+  color: #fdb8ff;
   border: 1px solid #3b3838;
 }
 .productosRecomendados .product span {
@@ -203,7 +224,7 @@ nav div ul li {
   transform: translate(-50%, -50%);
   color: #3b3838;
   padding: 20px;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   padding-top: 40px;
 }
 
@@ -221,10 +242,10 @@ nav div ul li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  background-color: #bf743d;
+  background-color: #e57225;
   color: #3b3838;
   border: 1px solid #3b3838;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   display: inline-block;
   padding: 15px 30px;
   font-size: 18px;
@@ -233,7 +254,7 @@ nav div ul li {
 }
 .bannerEnd a:hover {
   background-color: #3b3838;
-  color: #fa944a;
+  color: #fdb8ff;
 }
 
 .titleImg {
@@ -252,6 +273,8 @@ nav div ul li {
   font-weight: bold;
   padding-top: 60px;
   padding-bottom: 40px;
+  animation-duration: 4s;
+  animation-name: aparecer;
 }
 .titleImg p {
   padding: 20px 40px 20px 0;
@@ -264,14 +287,17 @@ nav div ul li {
 .titleImg img {
   width: 360px;
 }
+.titleImg img:hover {
+  transform: rotate(-15deg);
+}
 .titleImg a:hover {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .titleImg .breadcrumb-item.active {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .titleImg .breadcrumb-item.active::before {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 
 .testimonial-text .box {
@@ -281,7 +307,7 @@ nav div ul li {
   margin: 25px;
 }
 .testimonial-text h2 {
-  color: #fa944a;
+  color: #fdb8ff;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 36px;
@@ -301,7 +327,7 @@ nav div ul li {
 }
 
 .equipo {
-  background-image: linear-gradient(to bottom, #a96635, #bf743d);
+  background-image: linear-gradient(to bottom, #bf6121, #e57225);
 }
 .equipo h4 {
   font-size: 82px;
@@ -315,6 +341,10 @@ nav div ul li {
 .equipo img {
   max-width: 170px;
   border-radius: 100px;
+}
+.equipo img:hover {
+  transform: scale(1.2);
+  transform: rotate(-15deg);
 }
 .equipo div {
   text-align: center;
@@ -338,7 +368,7 @@ nav div ul li {
 
 .banner-top {
   background-image: url(../images/contactenos.jpg);
-  background-color: #a96635;
+  background-color: #bf6121;
   height: 500px;
   background-position: center;
   background-size: contain;
@@ -356,7 +386,7 @@ nav div ul li {
   transform: translate(-50%, -50%);
   color: #3b3838;
   padding: 15px 50px;
-  background-color: #a96635;
+  background-color: #bf6121;
   border: 2px solid #3b3838;
   display: flex;
   flex-wrap: wrap;
@@ -370,10 +400,10 @@ nav div ul li {
   line-height: 110px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  background-image: linear-gradient(to left, #a96635, #bf743d);
-  padding: 40px 20px 40px 40px;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-name: aparecer;
+  background-image: linear-gradient(to left, #bf6121, #e57225);
+  padding: 40px 20px 40px 40px;
   font-weight: bold;
   line-height: 90px;
 }
@@ -385,17 +415,17 @@ nav div ul li {
   text-align: left;
 }
 .form select {
-  background-color: #fa944a;
+  background-color: #fdb8ff;
 }
 .form textarea {
   width: 100%;
   height: 140px;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
 }
 .form input {
   width: 100%;
   padding: 10px 15px;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   color: #3b3838;
 }
 .form label {
@@ -415,7 +445,7 @@ nav div ul li {
   font-weight: 700;
   letter-spacing: 4px;
   background-color: #3b3838;
-  color: #a96635;
+  color: #bf6121;
   border: 1px solid #3b3838;
 }
 .form .btn-primario:hover {
@@ -427,10 +457,10 @@ nav div ul li {
   font-weight: 700;
   letter-spacing: 4px;
   background-color: #3b3838;
-  color: #a96635;
+  color: #bf6121;
   border: 1px solid #3b3838;
   background-color: #000;
-  color: #fa944a;
+  color: #fdb8ff;
 }
 
 .gracias p {
@@ -441,10 +471,10 @@ nav div ul li {
   font-size: 80px;
   line-height: 90px;
   font-weight: 700;
-  color: #fa944a;
+  color: #fdb8ff;
   padding: 80px 40px;
   text-align: center;
-  background-image: linear-gradient(to top, #a96635, #bf743d);
+  background-image: linear-gradient(to top, #bf6121, #e57225);
 }
 
 .productosCategoria {
@@ -453,7 +483,7 @@ nav div ul li {
   flex-wrap: wrap;
   justify-content: stretch;
   text-align: center;
-  animation-duration: 6s;
+  animation-duration: 3s;
   animation-name: aparecer;
 }
 .productosCategoria a {
@@ -461,12 +491,12 @@ nav div ul li {
   color: #3b3838;
 }
 .productosCategoria article {
-  border: #fa944a solid 1px;
+  border: #fdb8ff solid 1px;
   padding: 40px;
   width: 600px;
 }
 .productosCategoria a:hover {
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   transform: scale(1.1, 1.1);
 }
 .productosCategoria img {
@@ -496,7 +526,7 @@ nav div ul li {
   font-weight: 700;
   letter-spacing: 4px;
   background-color: #3b3838;
-  color: #a96635;
+  color: #bf6121;
   border: 1px solid #3b3838;
   font-size: 16px;
 }
@@ -505,7 +535,7 @@ nav div ul li {
 }
 
 .productosRelacionados {
-  background-image: linear-gradient(to bottom, #a96635, #bf743d);
+  background-image: linear-gradient(to bottom, #bf6121, #e57225);
 }
 .productosRelacionados h2 {
   font-size: 82px;
@@ -523,13 +553,13 @@ nav div ul li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 4px;
-  background-color: #fa944a;
+  background-color: #fdb8ff;
   color: #3b3838;
-  border: 1px solid #fa944a;
+  border: 1px solid #fdb8ff;
 }
 .productosRelacionados a:hover {
   background-color: #3b3838;
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .productosRelacionados .producto {
   text-align: center;
@@ -539,6 +569,10 @@ nav div ul li {
   max-width: 200px;
   border-radius: 180px;
   padding: 20px;
+}
+.productosRelacionados .producto img:hover {
+  transform: scale(1.2);
+  transform: rotate(-15deg);
 }
 .productosRelacionados .producto h4 {
   padding: 20px 40px 20px 0;
@@ -558,10 +592,10 @@ nav div ul li {
   color: #3b3838;
 }
 .productDescription .columna .breadcrumb-item.active {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .productDescription .columna .breadcrumb-item.active::before {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .productDescription h3 {
   font-size: 82px;
@@ -586,7 +620,7 @@ nav div ul li {
   padding-right: 15px;
 }
 .productDescription a:hover {
-  color: #fa944a;
+  color: #fdb8ff;
 }
 .productDescription form {
   padding-top: 25px;
@@ -609,12 +643,13 @@ nav div ul li {
   font-weight: 700;
   letter-spacing: 4px;
   background-color: #3b3838;
-  color: #a96635;
+  color: #bf6121;
   border: 1px solid #3b3838;
   font-size: 16px;
 }
 .productDescription .btn-primario:hover {
   background-color: #000;
+  color: #fdb8ff;
 }
 
 .masInfo {
